@@ -1,7 +1,7 @@
 package se.hkr.robot;
 
 public record Robot(Position pos, int dirIndex, Room room) {
-    private static final char[] DIRECTIONS = {'N', 'E', 'S', 'W'};
+    public static final char[] DIRECTIONS = {'N', 'E', 'S', 'W'};
     public static int directionToIndex(char direction) {
         for (int i = 0; i < DIRECTIONS.length; i++) {
             if (DIRECTIONS[i] == direction) {
@@ -31,6 +31,6 @@ public record Robot(Position pos, int dirIndex, Room room) {
 
     @Override
     public String toString() {
-        return String.format("%s %s", pos, DIRECTIONS[dirIndex]);
+        return String.format("%s %s", pos, DIRECTIONS[dirIndex % 4]);
     }
 }
