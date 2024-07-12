@@ -4,7 +4,7 @@ This application simulates a robot moving in a room based on given commands. The
 
 ## Prerequisites
 
-- Java 8 or higher
+- Java 16 or higher
 - Maven 3.6 or higher
 
 ## Project Structure
